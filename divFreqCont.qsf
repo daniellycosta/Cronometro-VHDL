@@ -37,11 +37,11 @@
 
 
 set_global_assignment -name FAMILY "Cyclone II"
-set_global_assignment -name DEVICE EP2C5F256C8
-set_global_assignment -name TOP_LEVEL_ENTITY Cronometro
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY Cronometro2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:31:45  MAY 11, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION 12.1
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -49,6 +49,18 @@ set_global_assignment -name VHDL_FILE divFreqCont.vhd
 set_global_assignment -name VHDL_FILE FFJK.vhd
 set_global_assignment -name VHDL_FILE Contador.vhd
 set_global_assignment -name VHDL_FILE Cronometro.vhd
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_V2 -to iniciar
+set_location_assignment PIN_AD12 -to saida[3]
+set_location_assignment PIN_AE12 -to saida[2]
+set_location_assignment PIN_AE13 -to saida[1]
+set_location_assignment PIN_AF13 -to saida[0]
+set_location_assignment PIN_V1 -to zerar
+set_global_assignment -name VHDL_FILE output_files/Contador2.vhd
+set_global_assignment -name VHDL_FILE output_files/FFJK.vhd
+set_global_assignment -name VHDL_FILE Contador2.vhd
+set_global_assignment -name VHDL_FILE Cronometro2.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

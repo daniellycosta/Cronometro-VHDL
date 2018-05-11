@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Contador2 is
+	port(clock, reset, preset enable: in std_logic;
+			s0,s1,s2,s3 : out std_logic;
+end Contador2;
+
+architecture Contador2 of Contador2 is
+signal contagem;
+
+	begin
+		process(clock, reset)
+		begin
+			if (reset = '1') then
+				 contagem <= 0000;
+			elsif (preset) = '1' then
+				contagem = 
+			elsif (clock'EVENT and clock = '1') then
+				if (enable = '1') then
+					contagem <= contagem +1;
+				end if;
+			end if;
+			q <= conv_std_logic_vector(contagem,4);
+		end process;
+end Contador2;

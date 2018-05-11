@@ -15,7 +15,7 @@ architecture DivisorFrequencia of DivisorFrequencia is
 		process(clock_in, contagem_divisor)
 		begin
 			if(clock_in = '1' and clock_in'EVENT) then
-				if contagem_divisor = 50000 then --Para um clock de 50MHz
+				if contagem_divisor = 50000000 then --Para um clock de 50MHz
 					estado <= not estado;
 					contagem_divisor <= 1;
 				else
