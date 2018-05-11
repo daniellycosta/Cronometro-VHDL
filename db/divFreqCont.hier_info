@@ -1,0 +1,66 @@
+|Cronometro
+clk => DivisorFrequencia:divFreq.clock_in
+iniciar => Contador:cont.enable
+zerar => Contador:cont.reset
+saida[0] <= Contador:cont.q[0]
+saida[1] <= Contador:cont.q[1]
+saida[2] <= Contador:cont.q[2]
+saida[3] <= Contador:cont.q[3]
+
+
+|Cronometro|DivisorFrequencia:divFreq
+clock_in => contagem_divisor[0].CLK
+clock_in => contagem_divisor[1].CLK
+clock_in => contagem_divisor[2].CLK
+clock_in => contagem_divisor[3].CLK
+clock_in => contagem_divisor[4].CLK
+clock_in => contagem_divisor[5].CLK
+clock_in => contagem_divisor[6].CLK
+clock_in => contagem_divisor[7].CLK
+clock_in => contagem_divisor[8].CLK
+clock_in => contagem_divisor[9].CLK
+clock_in => contagem_divisor[10].CLK
+clock_in => contagem_divisor[11].CLK
+clock_in => contagem_divisor[12].CLK
+clock_in => contagem_divisor[13].CLK
+clock_in => contagem_divisor[14].CLK
+clock_in => contagem_divisor[15].CLK
+clock_in => contagem_divisor[16].CLK
+clock_in => contagem_divisor[17].CLK
+clock_in => contagem_divisor[18].CLK
+clock_in => contagem_divisor[19].CLK
+clock_in => contagem_divisor[20].CLK
+clock_in => contagem_divisor[21].CLK
+clock_in => contagem_divisor[22].CLK
+clock_in => contagem_divisor[23].CLK
+clock_in => contagem_divisor[24].CLK
+clock_in => contagem_divisor[25].CLK
+clock_in => contagem_divisor[26].CLK
+clock_in => contagem_divisor[27].CLK
+clock_in => contagem_divisor[28].CLK
+clock_in => contagem_divisor[29].CLK
+clock_in => contagem_divisor[30].CLK
+clock_in => contagem_divisor[31].CLK
+clock_in => estado.CLK
+clock_out <= estado.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Cronometro|Contador:cont
+clock => contagem[0].CLK
+clock => contagem[1].CLK
+clock => contagem[2].CLK
+clock => contagem[3].CLK
+reset => contagem[0].ACLR
+reset => contagem[1].ACLR
+reset => contagem[2].ACLR
+reset => contagem[3].ACLR
+enable => contagem[3].ENA
+enable => contagem[2].ENA
+enable => contagem[1].ENA
+enable => contagem[0].ENA
+q[0] <= contagem[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= contagem[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= contagem[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= contagem[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri May 11 08:50:34 2018
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : divFreqCont
+Top-level Entity Name : Cronometro
+Family : Cyclone II
+Total logic elements : 55
+    Total combinational functions : 55
+    Dedicated logic registers : 37
+Total registers : 37
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
