@@ -21,5 +21,5 @@ architecture Cronometro2 of Cronometro2 is
 	signal estado : std_logic;
 		begin  
 			divFreq : DivisorFrequencia port map (clk, estado);
-			cont: Contador2 port map (estado and enable, zerar, '0' ,iniciar, saida);
+			cont: Contador2 port map (estado, zerar, '0' ,iniciar, saida);
 end Cronometro2;
