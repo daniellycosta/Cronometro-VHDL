@@ -19,8 +19,8 @@ architecture RelHora of Relhora is
 	end component;
 	
 	component Disp is
-		Port(A,B,C:IN std_logic;
-			x,y,z,d,e,f,g:OUT std_logic);
+		Port(entrada:IN std_logic_vector(3 downto 0));
+				saida:OUT std_logic_vector(6 downto 0));
 		end component;
 		
 		signal estado1, estado2: std_logic_vector(3 downto 0);
@@ -30,6 +30,6 @@ architecture RelHora of Relhora is
 			rel: DivisorFrequencia port map(clock, estadoDivFreq);
 			contHora1: Contador2 port map(estadoDivFreq,'0','0','1',estado1);
 			contHora2: Contador2 port map((not (estado1(0) and estado1(1) and estado1(2))),'0','0','1',estado2); 
-			DispHora1: Disp port map(estado1(1),estado1(2),estado1(3),hora1(0),hora1(1),hora1(2),hora1(3),hora1(4),hora1(5));
-			DispHora2: Disp port map(estado2(1),estado2(2),estado2(3),hora2(0),hora2(1),hora2(2),hora2(3),hora2(4),hora2(5));
+			DispHora1: Disp port map(estado1,hora);
+			DispHora2: Disp port map(estado2,hora2);
 end RelHora;

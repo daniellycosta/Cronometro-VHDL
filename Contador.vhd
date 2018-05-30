@@ -1,4 +1,4 @@
-library ieee;
+ibrary ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all; --Para usar a conversão de integer para binário de 4 bits
 

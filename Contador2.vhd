@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity Contador2 is
-	port(clk, res, pres,enable: in std_logic;
+	port(clk, res, pres,enable,parada: in std_logic;
 			s : out std_logic_vector(3 downto 0));
 end Contador2;
 
